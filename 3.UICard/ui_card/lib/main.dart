@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
                   radius: 50,
@@ -37,27 +38,41 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Container(
+                Card(
                   color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                  padding: EdgeInsets.all(8),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
+                  margin: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.orange,
+                    ),
+                    title: Text(
+                      '+91 9999999999',
+                      style: TextStyle(
                         color: Colors.orange,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
-                      Text(
-                        '+91 9999999999',
-                        style: TextStyle(
-                          color: Colors.orange,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.mail,
+                      color: Colors.orange,
+                    ),
+                    title: Text(
+                      "vermasahilcf5@gmail.com",
+                      style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
